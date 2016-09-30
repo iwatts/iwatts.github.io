@@ -84,6 +84,7 @@
         if (res) {
           //reset game and go to game screen
           console.log('Yes I want to overwrite my existing game and start a new game.');
+          User.resetPlayerData();
           $state.go('app.homebase');
         } else {
           //leave them there.

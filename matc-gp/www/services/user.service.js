@@ -126,7 +126,14 @@
       updateVal(addingLoot.name, 1);
       //self.playerData.$add(addingLoot);
     }
-
+    function resetPlayerData() {
+      for (var i in self.playerData) {
+        self.playerData.$remove(self.playerData[i]);;
+        var profileRef = ref.child(providerUser.uid);
+        var playerDataRef = profileRef.child("playerData");
+        self.playerData = $firebaseArray(playerDataRef);
+      }
+    }
   }
 
 })();
