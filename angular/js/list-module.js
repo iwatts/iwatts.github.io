@@ -4,7 +4,13 @@
         .component('myList', { // the tag for using this is <my-example>
             templateUrl: "../angular/templates/list-template.html",
             controller: listController
+        })
+        .filter('capitalize', function() {
+            return function(input) {
+                return (!!input) ? input.split(' ').map(function(wrd){return wrd.charAt(0).toUpperCase() + wrd.substr(1).toLowerCase();}).join(' ') : '';
+            }
         });
+
 
     function listController(listService, $scope, $localStorage) {
         var self = this;
@@ -48,7 +54,11 @@
 			self.currentList.splice(iid, 1);
         }
         function editItem(list) {
-            list.editState = !list.editState;
+            if (list.itemName != '' && list.itemNotes != '') {
+                list.editState = !list.editState;
+            } else {
+                list.addClass("error");
+            }
         }
         function updateItem($event) {
             var newContent = $event.target.value;

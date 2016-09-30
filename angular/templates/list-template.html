@@ -17,11 +17,11 @@
 
             <div class="title-state">
                 <div class="title">
-                    <h5>{{list.itemName}}</h5>
+                    <h5>{{list.itemName | capitalize}}</h5>
                 </div>
                 <div class="title-input">
                     Title:
-                    <input ng-model="list.itemName">
+                    <input ng-required="string" ng-model="list.itemName">
                 </div>
 
             </div>
@@ -47,7 +47,7 @@
                 <div class="notes">{{list.itemNotes}}</div>
                 <div class="notes-input">
                     Notes:
-                    <textarea ng-model="list.itemNotes">{{list.itemNotes}}</textarea>
+                    <textarea ng-required="string" ng-model="list.itemNotes">{{list.itemNotes}}</textarea>
                 </div>
             </div>
 

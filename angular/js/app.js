@@ -19,6 +19,6 @@
         columnWidth: '.item',
         itemSelector: '.item'
     });
-    console.log("Masonry running");
+    //console.log("Masonry running");
 
 })(jQuery);
