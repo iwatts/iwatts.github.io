@@ -42,7 +42,7 @@
           Player Inventory: <div ng-show="menu.displayName"></div>
         </ion-item>
         <ion-item ng-repeat="item in menu.inventory">
-         <div> <span class="{{item.icon}}"></span>{{item.name}} :{{item.lootCount}}</div>
+         <div><span class="{{item.icon}}">{{item.name}} :{{item.lootCount}}</span></div>
         </ion-item>
       </ion-list>
     </ion-content>

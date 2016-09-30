@@ -152,9 +152,14 @@ button.right {
 .scroll{
   padding: 0px 15px;
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: 100%;
   color: white;
   margin: 0 auto;
   max-width: 420px;
+}
+
+.disbutton{
+  margin-top: 10px;
 }
 
 .left-menu{

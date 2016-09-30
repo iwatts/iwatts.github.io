@@ -64,11 +64,11 @@
       //console.log("send request to service");
       //Game.gameStart();
       if (!User.playerData) {
-        console.log('No player data.');
+        //console.log('No player data.');
         $state.go('app.homebase');
       }
       else {
-        console.log(User.playerData);
+        //console.log(User.playerData);
         vm.showConfirm();
       }
     }
@@ -94,12 +94,12 @@
 
     function loadGame() {
       if (User.playerData) {
-        console.log('After player data.');
+        //console.log('After player data.');
         //go to game screen(homebase JS).
         vm.loadConfirm();
       }
       else {
-        console.log(User.playerData)
+        //console.log(User.playerData)
       }
     }
 
