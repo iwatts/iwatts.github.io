@@ -15,6 +15,7 @@
     self.loginWithEmail = loginWithEmail;
     self.logout = logout;
     self.updatePlayerData = updatePlayerData;
+    self.resetPlayerData = resetPlayerData;
 
     var userData = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyD8yymwpm2Vdn3-iZ_xhDqSpyuqzlKNTSo:[DEFAULT]'));
     self.displayName = userData ? userData.displayName || userData.email : undefined;
