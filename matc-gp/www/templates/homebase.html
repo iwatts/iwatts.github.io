@@ -1,0 +1,19 @@
+<ion-view title="Homebase">
+  <ion-content>
+    <div>THIS IS YOUR HOMEBASE</div><br>
+
+    <div>Your homebase is at {{level.count}}</div><br>
+
+    <span>YOUR MATERIALS:</span><br><br>
+
+    <div ng-repeat="item in fl.playerData">
+      <div>{{item.name}}: {{item.lootCount}}</div>
+    </div><br>
+    <div>
+      <button data-component="getLoot()">SCAVENGE</button>
+      <button data-component="build()">BUILD</button>
+      <button data-component="sleep()">SLEEP</button>
+      <button data-component="eat()">EAT</button>
+    </div>
+  </ion-content>
+</ion-view>
