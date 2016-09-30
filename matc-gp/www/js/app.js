@@ -29,7 +29,8 @@ angular.module('starter', ['ionic', 'firebase'])
       url: "/app",
       abstract: true,
       templateUrl: "templates/menu.html",
-      controller: 'menuController'
+      controller: 'menuController',
+      controllerAs: 'menu'
     })
 
     .state('login',{
@@ -55,7 +56,8 @@ angular.module('starter', ['ionic', 'firebase'])
        views: {
          'menuContent': {
            templateUrl: "templates/homebase.html",
-           controller: 'homebaseController'
+           controller: 'homebaseController',
+           controllerAs: 'hb'
          }
        }
     })

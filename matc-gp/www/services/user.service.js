@@ -18,7 +18,13 @@
 
     var userData = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyD8yymwpm2Vdn3-iZ_xhDqSpyuqzlKNTSo:[DEFAULT]'));
     self.displayName = userData ? userData.displayName || userData.email : undefined;
-    //self.playerData = userData ? userData.playerData : [];
+    if (self.displayName) {
+      var providerUser = userData.user ? userData.user : userData;
+      var ref = firebase.database().ref("users");
+      var profileRef = ref.child(providerUser.uid);
+      var playerDataRef = profileRef.child("playerData");
+      self.playerData = $firebaseArray(playerDataRef);
+    }
 
     // login with third-party provider
     function login(provider) {
@@ -65,7 +71,7 @@
       var profileRef = ref.child(providerUser.uid);
       var playerDataRef = profileRef.child("playerData");
       self.playerData = $firebaseArray(playerDataRef);
-      playerDataRef.$bindTo(self.playerData);
+      //playerDataRef.$bindTo(self.playerData);
 
       self.user = $firebaseObject(profileRef);
       self.user.$loaded().then(function () {
@@ -95,8 +101,30 @@
       $log.log("Authentication failed:", error);
     }
 
-    function updatePlayerData() {
-      self.playerData.set(self.playerData);
+    function updatePlayerData(addingLoot) {
+      function updateVal(key, amnt) {
+        var added = false;
+        for (var i in self.playerData) {
+          if (self.playerData[i].name == key) {
+            self.playerData[i].lootCount += amnt;
+            self.playerData.$save(self.playerData[i]);
+            var profileRef = ref.child(providerUser.uid);
+            var playerDataRef = profileRef.child("playerData");
+            self.playerData = $firebaseArray(playerDataRef);
+            added = true;
+            break; //Stop this loop, we found it!
+          }
+        }
+        if (!added) {
+          self.playerData.$add(addingLoot);
+          var profileRef = ref.child(providerUser.uid);
+          var playerDataRef = profileRef.child("playerData");
+          self.playerData = $firebaseArray(playerDataRef);
+        }
+      }
+
+      updateVal(addingLoot.name, 1);
+      //self.playerData.$add(addingLoot);
     }
 
   }

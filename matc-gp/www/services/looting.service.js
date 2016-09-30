@@ -86,8 +86,8 @@
               if (!User.playerData) {
                 User.playerData = [];
               }
-              //User.playerData.$bindTo(newLoot);
-              //User.updatePlayerData();
+              //User.playerData.push(newLoot);
+              User.updatePlayerData(newLoot);
           }
 
           /*UPDATE THE AMOUNT OF OBJECTS*/
@@ -100,7 +100,7 @@
             }
           }
           updateVal(newLoot, 1);
-          console.log(User.playerData);
+          //console.log(newLoot);
       }
   }
 })();

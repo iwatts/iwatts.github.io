@@ -23,6 +23,7 @@
     vm.showConfirm = showConfirm;
     vm.loadConfirm = loadConfirm;
 
+
     function showEmailLogin() {
       vm.showLogin = !vm.showLogin;
     }
@@ -64,10 +65,11 @@
       //Game.gameStart();
       if (!User.playerData) {
         console.log('No player data.');
-        vm.showConfirm();
+        $state.go('app.homebase');
       }
       else {
-        console.log(User.playerData)
+        console.log(User.playerData);
+        vm.showConfirm();
       }
     }
 
@@ -91,7 +93,7 @@
     }
 
     function loadGame() {
-      if (!User.playerData) {
+      if (User.playerData) {
         console.log('After player data.');
         //go to game screen(homebase JS).
         vm.loadConfirm();

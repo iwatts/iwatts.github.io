@@ -144,3 +144,23 @@ button.right {
   padding: 10px 0px;
   border-radius: 4px;
 }
+
+.homebase {
+  padding-top: 15px;
+}
+
+.scroll{
+  padding: 0px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.left-menu{
+  background-image: url("http://static2.gamespot.com/uploads/original/1365/13658182/2912914-fallout4_concept_blast_1434323459.jpg");
+}
+
+.right-menu{
+  background-image: url("http://vignette3.wikia.nocookie.net/fallout/images/9/90/Fallout_4_-_Launch_Trailer/revision/latest/scale-to-width-down/315?cb=20151105205717");
+}

@@ -1,4 +1,4 @@
-var materials = [
+var builds = [
   {
     "Name": "Shelter",
     "Cost": [
@@ -167,4 +167,3 @@ var materials = [
     "Build Count": 0
   },
 ];
-
