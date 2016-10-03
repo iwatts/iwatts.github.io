@@ -1,0 +1,21 @@
+<ion-view title="Homebase">
+  <ion-content>
+    <div class="homebase">THIS IS YOUR HOMEBASE</div><br>
+    <div>
+      Your homebase is a shanty and very simple. Four walls, a roof and a door. That's all you's gots. You need to scavenge so you can build it up and make it awesomer.
+    </div><br>
+
+    <span>YOUR MATERIALS:</span><br><br>
+
+    <div ng-repeat="item in hb.playerData">You found some
+      {{item.name}}. You now have {{item.lootCount}} {{item.name}}.
+    </div>
+
+    <br>
+    <div class="disbutton">
+      <button class="button button-block leftmost" ng-click="hb.getLoot()">SCAVENGE</button>
+      <button class="button button-block buildbutton" disabled>BUILD</button>
+      <button class="button button-block return" ng-click="hb.mainMenu()">MAIN MENU</button>
+    </div>
+  </ion-content>
+</ion-view>

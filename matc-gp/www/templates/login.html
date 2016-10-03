@@ -1,0 +1,52 @@
+<ion-view>
+
+  <ion-content>
+    <header id="loginHead">Survival Gears</header>
+      <div class="xmenu">
+          <div ng-app="starter" ng-show="vm.displayName">
+            <button class="button button-block" ng-click="vm.gameStart()">Start Game</button>
+          </div>
+          <div ng-app="starter" ng-show="vm.displayName">
+            <button class="button button-block" ng-click="vm.loadGame()">Load Game</button>
+          </div>
+          <div ng-app="starter" ng-show="vm.displayName">
+            <button class="button button-block">Settings</button>
+          </div>
+          <!-- <div ng-app="starter" ng-show="vm.displayName">
+            <button class="button button-block" ng-click="vm.getLoot()">Loot Test</button>
+          </div> -->
+
+        <content>
+          <button ng-if="!vm.displayName" class="button button-positive" id="fb" ng-click="vm.login('facebook')" disabled>Log in with
+            <span class="ion-social-facebook"></span>
+          </button><br><br>
+          <button ng-if="!vm.displayName" class="button button-assertive" id="google" ng-click="vm.login('google')">Log in
+            with <span class="ion-social-google"></span>
+          </button><br><br>
+          <button ng-if="!vm.displayName" class="button button-balanced" id="mailbutton" ng-click="vm.showEmailLogin()">Log in
+            with <span class="ion-email"></span>
+          </button><br><br>
+          <div ng-if="vm.displayName" class="mask">
+            <a id="loggedIn">You are logged in as {{ vm.displayName }}.</a><br>
+            <button id="logout" ng-if="vm.displayName" ng-click="vm.logout()">Click here to log out
+            </button>
+          </div>
+        </content>
+
+        <content ng-show="vm.showLogin">
+          <div>
+            <input placeholder="Enter Email Address" type="email" id="mail" ng-model="vm.email" required>
+          </div><br>
+          <div>
+            <input placeholder="Enter Password" type="password" id="password" ng-model="vm.password" required
+                   ng-keypress="($event.which === 13) ? vm.loginWithEmail(): 0">
+          </div><br>
+          <div>
+            <button id="maillogin" class="button button-balanced" ng-click="vm.loginWithEmail()">Log in</button>
+          </div>
+        </content>
+      </div>
+
+  </ion-content>
+
+</ion-view>

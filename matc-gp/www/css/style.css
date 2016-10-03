@@ -1,0 +1,171 @@
+ion-content {
+  background-image: url(../survivor1.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.xmenu {
+  position: absolute;
+  z-index: 10;
+  margin: 0 auto;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  max-width: 200px;
+  top: 70px;
+}
+ion-header-bar button {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#11c1f3+0,87e0fd+58,53cbf1+60,87e0fd+100 */
+  background: #11c1f3; /* Old browsers */
+  background: -moz-linear-gradient(top,  #11c1f3 0%, #87e0fd 58%, #53cbf1 60%, #87e0fd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #11c1f3 0%,#87e0fd 58%,#53cbf1 60%,#87e0fd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #11c1f3 0%,#87e0fd 58%,#53cbf1 60%,#87e0fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11c1f3', endColorstr='#87e0fd',GradientType=0 ); /* IE6-9 */
+
+
+  border: solid 1px #000;
+  border-radius: 5px;
+  width: 40px;
+}
+homebase .pane {
+  float: right;
+  max-width: 280px;
+  position: relative;
+}
+ion-header-bar button span {
+  font-size: 18px;
+}
+button.left {
+  float: left;
+}
+button.right {
+  float: right;
+  right: 6px;
+  position: absolute;
+}
+
+.border-box { box-sizing:border-box; -moz-box-sizing: border-box; }
+
+#status {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  text-align: center;
+}
+
+#fb {
+  background-color: #2A67A8;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#fb span {
+  font-size: 22px;
+  padding: 2px;
+}
+
+#google {
+  background-color: #ff2121;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#google span {
+  font-size: 22px;
+  padding: 2px;
+}
+
+#mailbutton {
+  background-color: mediumseagreen;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#mailbutton span {
+  font-size: 22px;
+  padding: 2px;
+}
+
+#loggedIn {
+  color: #8b0000;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#logout {
+  background-color: #8b0000;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+#mail {
+  border: solid;
+  border-color: darkgray;
+  border-width: 1px;
+  margin: auto;
+}
+
+#password {
+  border: solid;
+  border-color: darkgray;
+  border-width: 1px;
+  margin: auto;
+}
+
+#maillogin {
+  background-color: mediumseagreen;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#loginHead {
+  font-size: 35px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 35px;
+}
+
+
+.mask {
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px 0px;
+  border-radius: 4px;
+}
+
+.homebase {
+  padding-top: 15px;
+}
+
+.scroll{
+  padding: 0px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 100%;
+  color: white;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.disbutton{
+  margin-top: 10px;
+}
+
+.left-menu{
+  background-image: url("http://static2.gamespot.com/uploads/original/1365/13658182/2912914-fallout4_concept_blast_1434323459.jpg");
+}
+
+.right-menu{
+  background-image: url("http://vignette3.wikia.nocookie.net/fallout/images/9/90/Fallout_4_-_Launch_Trailer/revision/latest/scale-to-width-down/315?cb=20151105205717");
+}
