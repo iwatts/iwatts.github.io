@@ -100,3 +100,6 @@
 .main-body a.cta-shell:hover {
   text-decoration: underline;
 }
+.main-body .test {
+  color: white;
+}
