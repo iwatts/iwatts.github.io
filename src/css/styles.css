@@ -5,3 +5,98 @@
   padding: 90px 30px 0px;
   font-family: 'Raleway', sans-serif;
 }
+.main-body .menu-bar {
+  background-color: #000;
+  border-bottom: 1px solid #00ff00;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 10;
+}
+.main-body .menu-bar .menu-body {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.main-body .menu-bar .menu-body a {
+  color: #00ff00;
+  margin: 5px 10px;
+  text-decoration: none;
+}
+.main-body .menu-bar .menu-body a:hover {
+  color: #fff;
+}
+.main-body .menu-bar .menu-body a.active {
+  color: rgba(0, 255, 0, 0.4);
+}
+.main-body .menu-bar .menu-body .menu-left {
+  float: left;
+  margin: 0px 20px;
+}
+.main-body .menu-bar .menu-body .menu-right {
+  float: right;
+  margin: 0px 20px;
+}
+.main-body .home {
+  background-image: url("../img/programming.jpg");
+  background-size: cover;
+}
+.main-body .mask {
+  background-color: rgba(0, 40, 0, 0.9);
+}
+.main-body .bodyshell {
+  max-width: 1080px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 90px 30px 0px;
+  font-family: 'Raleway', sans-serif;
+}
+.main-body .bodyshell .content-left {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+.main-body .bodyshell .content-left .feature-image {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  border: 1px solid #00ff00;
+  margin: 0 auto;
+}
+.main-body .bodyshell .content-left .feature-text {
+  max-width: 300px;
+  background: #000;
+  padding: 5px 20px;
+  border: 1px solid #00ff00;
+  font-weight: 200;
+  margin: 0 auto;
+  font-size: 14px;
+  position: relative;
+  top: -75px;
+  right: -14%;
+  font-family: Courier;
+}
+.main-body .bodyshell .content-left .feature-text p {
+  margin: 5px 0 0 10px;
+  overflow: hidden;
+}
+.main-body .bodyshell .content-right {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+.main-body .bodyshell .content-right .main-info {
+  margin: 0 auto;
+  padding: 0px 30px;
+  text-align: center;
+}
+.main-body .bodyshell .content-right .main-info p,
+.main-body .bodyshell .content-right .main-info h1 {
+  text-align: left;
+}
+.main-body a.cta-shell {
+  color: #fff;
+}
+.main-body a.cta-shell:hover {
+  text-decoration: underline;
+}
