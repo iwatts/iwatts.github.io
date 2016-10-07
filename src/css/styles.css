@@ -71,12 +71,16 @@ body {
   max-width: 50%;
   width: 100%;
 }
+.container .content .column-right ul li {
+  list-style: none;
+}
 .container .content .column-right ul li span {
   display: block;
   height: 10px;
   background-color: #bdbdbd;
   border-radius: 10px;
   transition: all 0.3s;
+  margin: 8px 0px;
 }
 .container .content .column-right ul li span.p60 {
   width: 60%;
