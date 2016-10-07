@@ -6,6 +6,9 @@ body {
   padding: 0;
   height: 100%;
 }
+.clear {
+  clear: both;
+}
 .header {
   height: 55px;
   width: 100%;
@@ -62,7 +65,7 @@ body {
   color: #000;
 }
 .container .content {
-  height: 500px;
+  min-height: 500px;
   margin: 0px 20px;
 }
 .container .content .column-left,
