@@ -1,3 +1,8 @@
+@grey: #bdbdbd;
+@blue: #4fc3f7;
+@orange: #ff9800;
+@yellow: #fdd835;
+
 html{
     height: 100%;
 }
@@ -75,19 +80,31 @@ body {
                     span {
                         display: block;
                         height: 10px;
-                        background-color: blue;
+                        background-color: @grey;
                         border-radius: 10px;
-                        &.60 {
+                        transition: all 0.3s;
+                        &.p60 {
                             width: 60%;
                         }
-                        &.70 {
+                        &.p70 {
                             width: 70%;
                         }
-                        &.75 {
+                        &.p75 {
                             width: 75%;
                         }
-                        &.90 {
+                        &.p90 {
                             width: 90%;
+                        }
+                    }
+                    &:hover {
+                        .blue {
+                            background-color: @blue;
+                        }
+                        .orange {
+                            background-color: @orange;
+                        }
+                        .yellow {
+                            background-color: @yellow;
                         }
                     }
                 }
