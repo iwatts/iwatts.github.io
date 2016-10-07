@@ -66,7 +66,7 @@ body {
 }
 .container .content {
   min-height: 500px;
-  margin: 0px 20px;
+  margin: 35px 20px;
 }
 .container .content .column-left,
 .container .content .column-right {
@@ -118,4 +118,11 @@ body {
 }
 .container .paralx.p2 {
   background-image: url("../img/dim1.jpg");
+}
+@media only screen and (max-width: 580px) {
+  .container .content .column-left,
+  .container .content .column-right {
+    float: none;
+    max-width: 100%;
+  }
 }

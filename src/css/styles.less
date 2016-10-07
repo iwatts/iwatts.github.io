@@ -70,7 +70,7 @@ body {
     }
     .content {
         min-height:500px;
-        margin: 0px 20px;
+        margin: 35px 20px;
         .column-left,
         .column-right {
             float: left;
@@ -127,6 +127,17 @@ body {
         }
         &.p2 {
             background-image: url("../img/dim1.jpg");
+        }
+    }
+}
+@media only screen and (max-width: 580px) {
+    .container {
+        .content {
+            .column-left,
+            .column-right  {
+                float: none;
+                max-width: 100%;
+            }
         }
     }
 }
