@@ -63,6 +63,7 @@ body {
 }
 .container .content {
   height: 500px;
+  margin: 0px 20px;
 }
 .container .paralx {
   background-position: center;
