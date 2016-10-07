@@ -65,6 +65,11 @@ body {
   height: 500px;
   margin: 0px 20px;
 }
+.container .content .column-left,
+.container .content .column-right {
+  float: left;
+  max-width: 50%;
+}
 .container .paralx {
   background-position: center;
   background-attachment: fixed;
