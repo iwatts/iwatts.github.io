@@ -5,6 +5,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body h1 {
+  font-size: 42px;
+  font-weight: 300;
 }
 .clear {
   clear: both;
@@ -38,7 +43,7 @@ body {
   width: 100%;
 }
 .container .overlay .maskBox {
-  width: 60%;
+  width: 75%;
   margin: 200px auto 20px;
   background-color: rgba(0, 0, 0, 0.25);
   text-align: center;
@@ -74,8 +79,13 @@ body {
   max-width: 50%;
   width: 100%;
 }
+.container .content .column-left h2,
+.container .content .column-right h2 {
+  font-weight: 300;
+}
 .container .content .column-right ul li {
   list-style: none;
+  cursor: pointer;
 }
 .container .content .column-right ul li span {
   display: block;
@@ -106,6 +116,37 @@ body {
 .container .content .column-right ul li:hover .yellow {
   background-color: #fdd835;
 }
+.container .content .column-left .note-icon {
+  float: right;
+  margin: 25px 50px;
+}
+.container .content .column-left .folder-icon {
+  float: left;
+  margin: 25px 50px;
+}
+.container .content .column-left .time-icon {
+  float: left;
+  margin: 25px 50px;
+}
+.container .content .icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-size: cover;
+  vertical-align: middle;
+}
+.container .content .icon.me-icon {
+  background-image: url("../img/icon_photo.png");
+}
+.container .content .icon.note-icon {
+  background-image: url("../img/icon_note.png");
+}
+.container .content .icon.folder-icon {
+  background-image: url("../img/icon_folder.png");
+}
+.container .content .icon.time-icon {
+  background-image: url("../img/icon_time.png");
+}
 .container .paralx {
   background-position: center;
   background-attachment: fixed;
@@ -114,10 +155,26 @@ body {
   height: 100%;
 }
 .container .paralx.p1 {
-  background-image: url("../img/bubble.jpg");
+  background-image: url("../img/unmd.jpg");
 }
 .container .paralx.p2 {
   background-image: url("../img/dim1.jpg");
+}
+.container .footer {
+  background: #505050;
+  color: #fff;
+  padding: 20px 80px;
+}
+.container .footer ul {
+  display: inline-block;
+}
+.container .footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0px 10px;
+}
+.container .footer ul li a {
+  color: #fff;
 }
 @media only screen and (max-width: 580px) {
   .container .content .column-left,

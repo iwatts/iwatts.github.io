@@ -1,7 +1,12 @@
 @grey: #bdbdbd;
+@grey-dark: #505050;
 @blue: #4fc3f7;
 @orange: #ff9800;
 @yellow: #fdd835;
+
+
+@def-font: Arial, Helvetica, sans-serif;
+@light-weight: 300;
 
 html{
     height: 100%;
@@ -10,6 +15,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: @def-font;
+    h1 {
+        font-size: 42px;
+        font-weight: @light-weight;
+    }
 }
 .clear {
     clear: both;
@@ -41,7 +51,7 @@ body {
         position: absolute;
         width: 100%;
         .maskBox {
-            width:60%;
+            width: 75%;
             margin: 200px auto 20px;
             background-color: rgba(0,0,0,0.25);
             text-align: center;
@@ -76,11 +86,15 @@ body {
             float: left;
             max-width: 50%;
             width: 100%;
+            h2 {
+                font-weight: @light-weight;
+            }
         }
         .column-right {
             ul {
                 li {
                     list-style: none;
+                    cursor: pointer;
                     span {
                         display: block;
                         height: 10px;
@@ -115,6 +129,39 @@ body {
                 }
             }
         }
+        .column-left {
+            .note-icon {
+                float: right;
+                margin: 25px 50px;
+            }
+            .folder-icon {
+                float: left;
+                margin: 25px 50px;
+            }
+            .time-icon {
+                float: left;
+                margin: 25px 50px;
+            }
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-size: cover;
+            vertical-align: middle;
+            &.me-icon{
+                background-image: url("../img/icon_photo.png");
+            }
+            &.note-icon{
+                background-image: url("../img/icon_note.png");
+            }
+            &.folder-icon{
+                background-image: url("../img/icon_folder.png");
+            }
+            &.time-icon{
+                background-image: url("../img/icon_time.png");
+            }
+        }
     }
     .paralx {
         background-position: center;
@@ -123,10 +170,26 @@ body {
         background-repeat: no-repeat;
         height: 100%;
         &.p1 {
-            background-image: url("../img/bubble.jpg");
+            background-image: url("../img/unmd.jpg");
         }
         &.p2 {
             background-image: url("../img/dim1.jpg");
+        }
+    }
+    .footer {
+        background: @grey-dark;
+        color: #fff;
+        padding: 20px 80px;
+        ul {
+            display: inline-block;
+            li{
+                list-style: none;
+                display: inline-block;
+                margin: 0px 10px;
+                a {
+                    color: #fff;
+                }
+            }
         }
     }
 }
