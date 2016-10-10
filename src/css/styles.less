@@ -1,3 +1,8 @@
+@grey: #bdbdbd;
+@blue: #4fc3f7;
+@orange: #ff9800;
+@yellow: #fdd835;
+
 html{
     height: 100%;
 }
@@ -5,6 +10,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+.clear {
+    clear: both;
 }
 .header {
     height: 55px;
@@ -61,7 +69,52 @@ body {
         }
     }
     .content {
-        height:500px;
+        min-height:500px;
+        margin: 35px 20px;
+        .column-left,
+        .column-right {
+            float: left;
+            max-width: 50%;
+            width: 100%;
+        }
+        .column-right {
+            ul {
+                li {
+                    list-style: none;
+                    span {
+                        display: block;
+                        height: 10px;
+                        background-color: @grey;
+                        border-radius: 10px;
+                        transition: all 0.3s;
+                        margin: 8px 0px;
+                        &.p60 {
+                            width: 60%;
+                        }
+                        &.p70 {
+                            width: 70%;
+                        }
+                        &.p75 {
+                            width: 75%;
+                        }
+                        &.p90 {
+                            width: 90%;
+                        }
+                    }
+                    &:hover {
+                        .blue {
+                            background-color: @blue;
+                        }
+                        .orange {
+                            background-color: @orange;
+                        }
+                        .yellow {
+                            background-color: @yellow;
+                        }
+                    }
+                }
+            }
+        }
     }
     .paralx {
         background-position: center;
@@ -74,6 +127,17 @@ body {
         }
         &.p2 {
             background-image: url("../img/dim1.jpg");
+        }
+    }
+}
+@media only screen and (max-width: 580px) {
+    .container {
+        .content {
+            .column-left,
+            .column-right  {
+                float: none;
+                max-width: 100%;
+            }
         }
     }
 }

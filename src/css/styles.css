@@ -6,6 +6,9 @@ body {
   padding: 0;
   height: 100%;
 }
+.clear {
+  clear: both;
+}
 .header {
   height: 55px;
   width: 100%;
@@ -62,7 +65,46 @@ body {
   color: #000;
 }
 .container .content {
-  height: 500px;
+  min-height: 500px;
+  margin: 35px 20px;
+}
+.container .content .column-left,
+.container .content .column-right {
+  float: left;
+  max-width: 50%;
+  width: 100%;
+}
+.container .content .column-right ul li {
+  list-style: none;
+}
+.container .content .column-right ul li span {
+  display: block;
+  height: 10px;
+  background-color: #bdbdbd;
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin: 8px 0px;
+}
+.container .content .column-right ul li span.p60 {
+  width: 60%;
+}
+.container .content .column-right ul li span.p70 {
+  width: 70%;
+}
+.container .content .column-right ul li span.p75 {
+  width: 75%;
+}
+.container .content .column-right ul li span.p90 {
+  width: 90%;
+}
+.container .content .column-right ul li:hover .blue {
+  background-color: #4fc3f7;
+}
+.container .content .column-right ul li:hover .orange {
+  background-color: #ff9800;
+}
+.container .content .column-right ul li:hover .yellow {
+  background-color: #fdd835;
 }
 .container .paralx {
   background-position: center;
@@ -76,4 +118,11 @@ body {
 }
 .container .paralx.p2 {
   background-image: url("../img/dim1.jpg");
+}
+@media only screen and (max-width: 580px) {
+  .container .content .column-left,
+  .container .content .column-right {
+    float: none;
+    max-width: 100%;
+  }
 }
