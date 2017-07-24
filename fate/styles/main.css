@@ -1,6 +1,10 @@
 @font-face {
-font-family: Fate;
+font-family: Fate_icons;
 src: url(font/Fate_Core_Font.ttf);
+}
+@font-face {
+font-family: Fate;
+src: url(font/Ash.ttf);
 }
 body {
 	font-family: Fate;
