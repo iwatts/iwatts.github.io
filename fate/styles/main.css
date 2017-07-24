@@ -6,7 +6,12 @@ src: url(font/Fate_Core_Font.ttf);
 font-family: Fate;
 src: url(font/Ash.ttf);
 }
-body {
+h1,h2,h3,h4,h5,h6 {
 	font-family: Fate;
+}
+body {
 	background-color: #E8E8E8;
+}
+.window {
+	background-color: #fff;
 }
