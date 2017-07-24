@@ -12,6 +12,11 @@ h1,h2,h3,h4,h5,h6 {
 body {
 	background-color: #E8E8E8;
 }
+.img-box {
+	width: 100%;
+	background-image: url(img/Powered-by-Fate-Final-Light-BG-300x117.png);
+	height: 100px;
+}
 .window {
 	background-color: #fff;
 	border-left: 3px ridge #0a497a;
