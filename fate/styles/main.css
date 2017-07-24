@@ -14,4 +14,9 @@ body {
 }
 .window {
 	background-color: #fff;
+	border-left: 3px ridge #0a497a;
+	padding-bottom: 20px;
+}
+.border-bottom {
+	border-bottom: 3px ridge #0a497a;
 }
