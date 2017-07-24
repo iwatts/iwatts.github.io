@@ -3,6 +3,6 @@ font-family: Fate;
 src: url(fonts/Fate_Core_Font.ttf);
 }
 body {
-	font: Fate, arial;
+	font-family: Fate, arial;
 	background-color: #E8E8E8;
 }
