@@ -13,9 +13,13 @@ body {
 	background-color: #E8E8E8;
 }
 .img-box {
-	width: 100%;
-	background-image: url(img/Powered-by-Fate-Final-Light-BG-300x117.png);
-	height: 100px;
+	width: auto;
+	height: 75px;
+	margin-top: 10px;
+	background-image: url(../img/Powered-by-Fate-Final-Light-BG-300x117.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 .window {
 	background-color: #fff;
