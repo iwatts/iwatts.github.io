@@ -63,6 +63,7 @@ a {
 	overflow-x: hidden;
 	background: #1a1a1a;
 	position: absolute;
+	min-height: 500px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
