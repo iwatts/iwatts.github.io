@@ -12,6 +12,11 @@ h1,h2,h3,h4,h5,h6 {
 body {
 	background-color: #E8E8E8;
 }
+a {
+	font-weight: bold;
+	color: #0a497a;
+	text-decoration: none;
+}
 .img-box {
 	width: auto;
 	height: 75px;
