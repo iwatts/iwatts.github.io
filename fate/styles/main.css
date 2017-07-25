@@ -38,7 +38,9 @@ a {
 	border-bottom: 3px ridge #0a497a;
 }
 
-
+.mask {
+	background-color: rgba(0,0,0,0.2);
+}
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/
