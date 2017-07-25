@@ -173,12 +173,11 @@ a {
 
 .hamburger {
   position: fixed;
-  top: 125px;  
+  top: 15px;  
   z-index: 999;
   display: block;
   width: 32px;
   height: 32px;
-  margin-left: 15px;
   background: transparent;
   border: none;
 }
