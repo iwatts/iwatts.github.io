@@ -31,7 +31,7 @@ a {
 	border-left: 3px ridge #0a497a;
 	border-right: 3px ridge #0a497a;
 	border-bottom: 3px ridge #0a497a;
-	padding-bottom: 20px;
+	padding: 20px 0px;
 }
 .border-bottom {
 	border-bottom: 3px ridge #0a497a;
