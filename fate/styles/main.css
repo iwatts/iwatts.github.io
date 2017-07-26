@@ -111,7 +111,7 @@ a {
 }
 
 .sidebar-nav li:first-child:before {
-  background-color: #000;
+  background-color: transparent;
 
 }
 
