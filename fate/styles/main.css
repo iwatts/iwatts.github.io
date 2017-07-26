@@ -110,7 +110,9 @@ a {
     width: 100%;
 }
 
-.sidebar-nav li:before {
+.sidebar-nav li:before
+
+.sidebar-nav li:first-child:before {
     content: '';
     position: absolute;
     top: 0;
@@ -118,7 +120,7 @@ a {
     z-index: -1;
     height: 100%;
     width: 3px;
-    background-color: #0a497a;
+    background-color: #000;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
@@ -157,6 +159,9 @@ a {
     height: 65px;
     font-size: 20px;
     line-height: 44px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 30px;
 }
 .sidebar-nav .dropdown-menu {
     position: relative;
