@@ -110,9 +110,12 @@ a {
     width: 100%;
 }
 
-.sidebar-nav li:before
-
 .sidebar-nav li:first-child:before {
+  background-color: #000;
+
+}
+
+.sidebar-nav li:before {
     content: '';
     position: absolute;
     top: 0;
@@ -120,7 +123,7 @@ a {
     z-index: -1;
     height: 100%;
     width: 3px;
-    background-color: #000;
+    background-color: #0a497a;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
