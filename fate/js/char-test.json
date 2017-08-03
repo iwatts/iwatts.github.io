@@ -1,0 +1,28 @@
+{
+	"[uniqu_char_id]": {
+		"char_name": "[string]",
+		"char_desc": "[string]",
+		"refresh": "3",
+		"skills": {
+			"[skill_name]": "[skill_level]",
+			"[skill_name]": "[skill_level]"
+		},
+		"apsects": {
+			"[aspect_id]": "[aspect_string]"
+		},
+		"stunts": {
+			"[stunt_id]": "[stunt_string]"
+		},
+		"extras": {
+			"[extra_id]": "[extra_string]"
+		},
+		"consequences": {
+			"[consequence_id]": "[consequence_string]"
+		},
+		"physical_stress": "2",
+		"mental_stress": "2",
+		"notes": {
+			"[note_id]": "[note_string]"
+		}
+	}
+}
