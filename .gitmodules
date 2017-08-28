@@ -1,0 +1,3 @@
+[submodule "Fate"]
+	path = Fate
+	url = https://github.com/iwatts/Fate
