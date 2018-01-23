@@ -86,6 +86,9 @@ body h1 {
 .containerBox .content .column-right h2 {
   font-weight: 300;
 }
+.containerBox .content .column-right {
+  margin: 10px 0px;
+}
 .containerBox .content .column-right ul li {
   list-style: none;
   cursor: pointer;
@@ -118,6 +121,9 @@ body h1 {
 }
 .containerBox .content .column-right ul li:hover .yellow {
   background-color: #fdd835;
+}
+.containerBox .content .column-left {
+  margin: 10px 0px;
 }
 .containerBox .content .column-left .note-icon {
   float: right;
@@ -163,20 +169,20 @@ body h1 {
 .containerBox .paralx.p2 {
   background-image: url("../img/dim1.jpg");
 }
-.containerBox .footer {
+.footer {
   background: #505050;
   color: #fff;
   padding: 20px 80px;
 }
-.containerBox .footer ul {
+.footer ul {
   display: inline-block;
 }
-.containerBox .footer ul li {
+.footer ul li {
   list-style: none;
   display: inline-block;
   margin: 0px 10px;
 }
-.containerBox .footer ul li a {
+.footer ul li a {
   color: #fff;
 }
 .grid:after {
