@@ -113,6 +113,9 @@ body h1 {
 .containerBox .content .column-right ul li span.p90 {
   width: 90%;
 }
+.containerBox .content .column-right ul li span.p10 {
+  width: 10%;
+}
 .containerBox .content .column-right ul li:hover .blue {
   background-color: #4fc3f7;
 }
