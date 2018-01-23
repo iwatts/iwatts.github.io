@@ -73,7 +73,7 @@ body h1 {
   color: #000;
 }
 .containerBox .content {
-  min-height: 500px;
+  min-height: 250px;
   margin: 35px 20px;
 }
 .containerBox .content .column-left,
@@ -87,7 +87,7 @@ body h1 {
   font-weight: 300;
 }
 .containerBox .content .column-right {
-  margin: 10px 0px;
+  margin: 0px 10px;
 }
 .containerBox .content .column-right ul li {
   list-style: none;
@@ -123,7 +123,7 @@ body h1 {
   background-color: #fdd835;
 }
 .containerBox .content .column-left {
-  margin: 10px 0px;
+  margin: 0px 10px;
 }
 .containerBox .content .column-left .note-icon {
   float: right;
