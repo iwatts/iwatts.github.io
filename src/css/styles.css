@@ -11,13 +11,16 @@ body h1 {
   font-size: 42px;
   font-weight: 300;
 }
+.nopadding {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
 .clear {
   clear: both;
 }
 .header {
   height: 55px;
   width: 100%;
-  position: fixed;
   top: 0;
   background: #fff;
   border-bottom: 1px solid #000;
@@ -33,16 +36,16 @@ body h1 {
   height: 46px;
   display: block;
 }
-.container {
+.containerBox {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.container .overlay {
+.containerBox .overlay {
   position: absolute;
   width: 100%;
 }
-.container .overlay .maskBox {
+.containerBox .overlay .maskBox {
   width: 75%;
   margin: 200px auto 20px;
   background-color: rgba(0, 0, 0, 0.25);
@@ -51,7 +54,7 @@ body h1 {
   color: #fff;
   border: 2px solid #fff;
 }
-.container .overlay a {
+.containerBox .overlay a {
   transition: all 0.3s;
   width: 40%;
   margin: 15px auto 0px;
@@ -65,29 +68,29 @@ body h1 {
   right: 0;
   cursor: pointer;
 }
-.container .overlay a:hover {
+.containerBox .overlay a:hover {
   background-color: rgba(255, 255, 255, 0.45);
   color: #000;
 }
-.container .content {
+.containerBox .content {
   min-height: 500px;
   margin: 35px 20px;
 }
-.container .content .column-left,
-.container .content .column-right {
+.containerBox .content .column-left,
+.containerBox .content .column-right {
   float: left;
   max-width: 50%;
   width: 100%;
 }
-.container .content .column-left h2,
-.container .content .column-right h2 {
+.containerBox .content .column-left h2,
+.containerBox .content .column-right h2 {
   font-weight: 300;
 }
-.container .content .column-right ul li {
+.containerBox .content .column-right ul li {
   list-style: none;
   cursor: pointer;
 }
-.container .content .column-right ul li span {
+.containerBox .content .column-right ul li span {
   display: block;
   height: 10px;
   background-color: #bdbdbd;
@@ -95,86 +98,117 @@ body h1 {
   transition: all 0.3s;
   margin: 8px 0px;
 }
-.container .content .column-right ul li span.p60 {
+.containerBox .content .column-right ul li span.p60 {
   width: 60%;
 }
-.container .content .column-right ul li span.p70 {
+.containerBox .content .column-right ul li span.p70 {
   width: 70%;
 }
-.container .content .column-right ul li span.p75 {
+.containerBox .content .column-right ul li span.p75 {
   width: 75%;
 }
-.container .content .column-right ul li span.p90 {
+.containerBox .content .column-right ul li span.p90 {
   width: 90%;
 }
-.container .content .column-right ul li:hover .blue {
+.containerBox .content .column-right ul li:hover .blue {
   background-color: #4fc3f7;
 }
-.container .content .column-right ul li:hover .orange {
+.containerBox .content .column-right ul li:hover .orange {
   background-color: #ff9800;
 }
-.container .content .column-right ul li:hover .yellow {
+.containerBox .content .column-right ul li:hover .yellow {
   background-color: #fdd835;
 }
-.container .content .column-left .note-icon {
+.containerBox .content .column-left .note-icon {
   float: right;
   margin: 25px 50px;
 }
-.container .content .column-left .folder-icon {
+.containerBox .content .column-left .folder-icon {
   float: left;
   margin: 25px 50px;
 }
-.container .content .column-left .time-icon {
+.containerBox .content .column-left .time-icon {
   float: left;
   margin: 25px 50px;
 }
-.container .content .icon {
+.containerBox .content .icon {
   width: 50px;
   height: 50px;
   display: inline-block;
   background-size: cover;
   vertical-align: middle;
 }
-.container .content .icon.me-icon {
+.containerBox .content .icon.me-icon {
   background-image: url("../img/icon_photo.png");
 }
-.container .content .icon.note-icon {
+.containerBox .content .icon.note-icon {
   background-image: url("../img/icon_note.png");
 }
-.container .content .icon.folder-icon {
+.containerBox .content .icon.folder-icon {
   background-image: url("../img/icon_folder.png");
 }
-.container .content .icon.time-icon {
+.containerBox .content .icon.time-icon {
   background-image: url("../img/icon_time.png");
 }
-.container .paralx {
+.containerBox .paralx {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
 }
-.container .paralx.p1 {
+.containerBox .paralx.p1 {
   background-image: url("../img/unmd.jpg");
 }
-.container .paralx.p2 {
+.containerBox .paralx.p2 {
   background-image: url("../img/dim1.jpg");
 }
-.container .footer {
+.containerBox .footer {
   background: #505050;
   color: #fff;
   padding: 20px 80px;
 }
-.container .footer ul {
+.containerBox .footer ul {
   display: inline-block;
 }
-.container .footer ul li {
+.containerBox .footer ul li {
   list-style: none;
   display: inline-block;
   margin: 0px 10px;
 }
-.container .footer ul li a {
+.containerBox .footer ul li a {
   color: #fff;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+.grid-item {
+  float: left;
+  border: 5px solid rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+.grid-item.grid-item--width2 {
+  width: 66.666%;
+}
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+.grid-item .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 1s;
+}
+.grid-item:hover .mask {
+  background-color: rgba(0, 0, 0, 0);
 }
 @media only screen and (max-width: 580px) {
   .container .content .column-left,
