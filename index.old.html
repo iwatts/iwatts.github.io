@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="main-index">
+    <h1 id="my-title">Hello World</h1>
+    <div class="businessCard">
+        <div class="logo"></div>
+        <div class="c-info">
+            <div class="left">
+                <div class="position"></div>
+                <div class="email"></div>
+            </div>
+            <div class="right">
+                <div class="number"></div>
+                <div class="website"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="src/js/plugins.js"></script>
+<script src="src/js/main.js"></script>
+
+<script>
+
+    function modifyColor(id, color) {
+        document.getElementById(id).style.color = color;
+    }
+    modifyColor('my-title', 'blue');
+
+    function execute() {
+        modifyColor('my-title', 'gray');
+    }
+
+    window.setTimeout(execute, 2000);
+
+    function fib(n) {
+        if(n <= 0) {
+            return 0;
+        }
+        else if(n <= 2) {
+            return 1;
+        }
+        else {
+            return fib(n - 2) + fib(n - 1);
+        }
+    }
+
+    function fac(int) {
+        if(int <= 0) {
+            return 1;
+        }
+        return int * fac(int - 1);
+
+    }
+
+    console.log(fib(6));
+
+    console.log(fac(8));
+
+    var me = {
+        name:"Isaac Watts",
+        phone: "801.577.9531",
+        position: "Web Developer",
+        p_site:"http://iwatts.github.io",
+        email:"theicean@gmail.com"
+    }
+
+
+
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        $('.logo').append("<h3>" + me.name + "</h3>");
+        $('.position').append(me.position);
+        $('.number').append(me.phone);
+        $('.email').append("<a href='mailto:" + me.email +"'>" + me.email + "</a>");
+        $('.website').append("<a href='" + me.p_site +"'>" + me.p_site + "</a>");
+    });
+</script>
+
+</body>
+</html>

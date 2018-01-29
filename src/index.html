@@ -1,112 +1,98 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Portfolio | Isaac Watts</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-
-        <link rel="stylesheet" href="css/main.css">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <div class="main-body home">
-            <div class="mask">
-                <div class="menu-bar">
-                    <div class="menu-body">
-                        <div class="menu-left">
-                            <a href="index.html">LOGO</a>
-                        </div>
-                        <div class="menu-right">
-                            <a href="about.html">About</a>
-                            <a href="contact.html">Contact</a>
-                            <a href="gallery.html">Gallery</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="home-body bodyshell">
-                    <div class="content-left">
-                        <div class="feature-image" style="background-image: url('img/default-avatar.png')"></div>
-                        <div class="feature-text">
-                            <pre style="overflow: auto;">
-/* create Isaac */
-var person = {
-    firstName:"Isaac",
-    lastName:"Watts",
-    fullName : function() {
-        return this.firstName + " " + this.lastName;
-    }
-};
-
-/* create list of employees */
-var employees = [];
-
-/*set company success*/
-var companySuccess = null;
-
-/* Check list of employees */
-for(var i = 0; i < employees.length; i++) {
-    /* Check if Isaac is employee */
-    if (employees[i].fullName != "Isaac Watts") {
-        /* Push Isaac to employee */
-        employees.push(person);
-        companySuccess = true;
-    };
-};
-                            </pre>
-                        </div>
-                    </div>
-                    <div class="content-right">
-                        <div class="main-info">
-                            <h1>Isaac Watts</h1>
-                            <p>I possess more than 3 years of progressive experience in the web development field.  My professional history includes positions such as Junior Developer at <a href="http://ekragency.com/" target="_blank">EKR Agency</a> as well as a variety of independent work.</p>
-                            <p>My responsibilities have included creation of emails, custom WordPress template development, and styling mobile versions of client sites.</p>
-                            <a class="cta-shell" href="about.html">
-                                <div class="cta-button">Read More!<span class="cta-flash"></span></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <footer>
-                        <div class="footer-content">
-                            <div></div>
-                            <div class="social">
-                                <div class="linkedin"></div>
-                                <div class="facebook"></div>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-            </div>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="../src/less.html">
+                <span class="logo-image"></span>
+            </a>
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+        <div class="nav"></div>
+    </div>
+    <div class="containerBox">
+        <div class="overlay">
+            <div class="maskBox">
+                <h1>Always look for something New.</h1>
+                <h4>(Pardon the dust, I'm currently making updates to the site!)</h4>
+            </div>
+            <a href="../src/gallery.html">Let's see what I've done</a>
+        </div>
+        <div class="paralx p1"></div>
+        <div class="content">
+            <div class="column-left">
+                <h2>About Me <span class="icon me-icon"></span></h2>
+                <p>
+                    <em>If you're here, you're probably wanting to see what I can do...</em>
+                </p>
+                <span class="icon folder-icon"></span>
+                <p> I possess more than 5 years of progressive experience in the web development field.  My professional history includes positions such as Customer Support for <a target="_blank" href="https://www.storesonlinepro.com/">StoresOnline</a>, Junior and Front-end Developer at <a target="_blank" href="https://ekragency.com/">EKR Agency</a> as well as a variety of independent work.</p>
+                <div class="clear"></div>
+                <span class="icon note-icon"></span>
+                <p>My personal hobbies include gaming, both online and tabletop, reading, and drawing. More specifically of these activities, I enjoy playing RPGS, I love fantasy and sci/fi, and I like to carry a sketchbook around to doodle and write ideas in as they come to me.</p>
+                <div class="clear"></div>
+                <span class="icon time-icon"></span>
+                <p>I first began experimenting with web development back in 2001. I was among the first students in my school to take classes on web development and learning HTML. I have since been able to experiment and learn CSS and  Javascript and jQuery through personal projects and experiments. I have also completed a course on web development through MATC.</p>
+                <div class="clear"></div>
+            </div>
+            <div class="column-right">
+                <p>
+                    <strong>Oh look, a list!</strong>
+                </p>
+                <p>Areas of experience:
+                    <ul>
+                        <li>CSS3<span class="p90 blue"></span></li>
+                        <li>Angular<span class="p60 orange"></span></li>
+                        <li>Javascript<span class="p70 yellow"></span></li>
+                        <li>HTML5<span class="p90 blue"></span></li>
+                        <li>Jquery<span class="p75 yellow"></span></li>
+                        <li>PHP<span class="p70 yellow"></span></li>
+                        <li>WordPress<span class="p70 yellow"></span></li>
+                        <li>GIT<span class="p90 blue"></span></li>
+                        <li>C++<span class="p10 red"></span></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="overlay">
+            <div class="maskBox">
+                <h1>Hard work is good. Smart work is better. A combination of both is a dream.</h1>
+            </div>
+            <a href="mailto:theicean@gmail.com?Subject=Work%20contact" target="_top">Contact me now</a>
+        </div>
+        <div class="paralx p2"></div>
+        <div class="content">
+            <div class="column-left">
+                <p>My most recent responsibilities as Front End Developer at EKR Agency match the qualifications many in the industry are seeking. As the Front End Developer, my responsibilities included styling mobile versions of client sites, and working in Laravel to develop templates for Microfocus. I assisted in the successful completion of a transition project for the new website of <a href="https://www.microfocus.com/" target="_blank">microfocus.com</a>. My supervisor also relied on my ability to skin and format the sites content.</p>
+            </div>
+            <div class="column-right">
+                <h3><em>"The three great essentials to achieve anything worthwhile are, first, hard work; second, stick-to-itiveness; third, common sense."</em></h3>
+                <p>– Thomas A. Edison</p>
+                <p>Click here to download my most recent <a href="../src/Resume2018.pdf" target="_blank">resume</a>.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer">
+            <span>&copy;2018 - Isaac W</span>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/isaac-watts-926a0035/">LinkedIn</a>
+                </li>
+                <li><a href="https://www.facebook.com/isaac.watts">FaceBook</a></li>
+                <li><a href="https://github.com/iwatts">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
