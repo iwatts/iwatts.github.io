@@ -111,6 +111,10 @@ body h1 {
 .containerBox .content .column-right h2 {
   font-weight: 300;
 }
+.containerBox .content .column-left h3,
+.containerBox .content .column-right h3 {
+  font-weight: 300;
+}
 .containerBox .content .column-right {
   margin: 0px 10px;
 }
