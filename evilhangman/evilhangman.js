@@ -1,13 +1,18 @@
 let currentWordList = wordList;
 let remainingGuesses = 0;
 let totalGuesses = 0;
+let remainingIncorrectGuesses = 0;
+let correctLetters = 0;
+
 let modalElement = document.getElementsByClassName(`modal`)[0];
 let coverblockElement = document.getElementById(`cover-block`);
+let keysList = document.getElementsByClassName('key')
 
 function newGame(guesses) {
 	currentWordList = wordList;
 	remainingGuesses = guesses;
-	totalGuesses = guesses;
+  totalGuesses = guesses;
+  remainingIncorrectGuesses = guesses;
 	if (modalElement && modalElement.classList.contains("active")) {
 		document.getElementById(`result`).innerHTML = '';
 		document.getElementById(`result`).classList.remove("show");
@@ -18,7 +23,8 @@ function newGame(guesses) {
 }
 
 function endGame() {
-	endGameText = "";
+  endGameText = "";
+  //all lettters need to be guessed
 	if (Object.keys(currentWordList).length == 1) {
 		endGameText = "You Won!";
 	} else {
@@ -26,11 +32,14 @@ function endGame() {
 	}
 	document.getElementById(`result`).classList.add("show");
 	document.getElementById(`result`).innerHTML = endGameText;
-	modalElement.classList.add(`active`);
+  modalElement.classList.add(`active`);
+  for ( let i = 0; i < keysList.length; i++) {
+    keysList[i].classList.add("disabled");
+  }
 }
 
 function percentageLeft() {
-	remainingPercentage = Math.floor((remainingGuesses / totalGuesses) * 100);
+	remainingPercentage = Math.floor((remainingIncorrectGuesses / totalGuesses) * 100);
 	imageRevealPercentage = Math.floor(100 - remainingPercentage);
 	coverblockElement.style.top = imageRevealPercentage + "%";
 }
@@ -72,19 +81,27 @@ function resetWords() {
 		document.getElementById(`key-${letter}`).classList.remove(`disabled`);
 	}
 }
-
 function submitGuess(letter) {
-	if (remainingGuesses-- <= 0) {
-		return endGame();
-	}
+  console.log('incorrectguesses: ',remainingIncorrectGuesses)
+  // if this is empty it was an failed guess
+  const indices = guessLetter(letter.toLowerCase());
+  console.log('indices: ', indices)
+  //check for incorrect guess
+  if (indices.length === 0) {
+    console.log('incorrect Guess')
+    remainingIncorrectGuesses--
+  }
 
-	const indices = guessLetter(letter.toLowerCase());
 
 	for (const index of indices) {
 		document.getElementById(
 			`letter${index}`
-		).innerHTML = letter.toUpperCase();
-	}
+    ).innerHTML = letter.toUpperCase();
+    if(indices[index]  !== '') {
+      correctLetters++
+      console.log('Correct Letters: ', correctLetters)
+    }
+  }
 
 	document
 		.getElementById(`key-${letter.toLowerCase()}`)
@@ -93,10 +110,10 @@ function submitGuess(letter) {
 	percentageLeft();
 	guessesLeft = remainingGuesses;
 	wordPickedButNotGuessed =
-		Object.keys(currentWordList).length === 1 && guessesLeft <= 0
+		Object.keys(currentWordList).length === 1
 			? true
 			: false;
-	if (wordPickedButNotGuessed || guessesLeft <= 0) {
+	if (correctLetters === 7 || remainingIncorrectGuesses <= 0) {
 		return endGame();
 	}
 }
@@ -121,14 +138,10 @@ function guessLetter(letter) {
 
 	for (const signature in wordSignatures) {
 		const currentLength = wordSignatures[signature].length;
-		// console.log(`Got signature ${signature} with length ${currentLength}`);
 
 		if (currentLength > longestLength) {
 			longestLength = currentLength;
 			longestSignature = signature;
-			// console.log(
-			// 	`Found new longest signature: ${longestSignature} at ${longestLength} words.`
-			// );
 		}
 	}
 
