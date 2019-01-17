@@ -1,0 +1,133 @@
+<!-- Possible considerations
+  add a box for guesses remaining.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Page Title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	</head>
+	<body>
+		<div class="modal">
+			<div id="result" class="result"></div>
+			<div class="game-options">
+				<div class="button-7">
+					<button onclick="newGame(7)">New 7-Guess Game</button>
+				</div>
+				<div class="button-26">
+					<button onclick="newGame(26)">New 26-Guess Game</button>
+				</div>
+			</div>
+		</div>
+		<div class="hangman"><img src="./hangman.jpg" alt="" /><div class="cover-block-wrapper"><div id="cover-block" data-percentage="0%"></div></div></div>
+		<div class="word">
+			<div id="letter0" class="letter"></div>
+			<div id="letter1" class="letter"></div>
+			<div id="letter2" class="letter"></div>
+			<div id="letter3" class="letter"></div>
+			<div id="letter4" class="letter"></div>
+			<div id="letter5" class="letter"></div>
+			<div id="letter6" class="letter"></div>
+		</div>
+		<div class="keyboard">
+			<div class="rows">
+				<div id="key-q" class="key">
+					<button onclick="submitGuess('q')">q</button>
+				</div>
+				<div id="key-w" class="key">
+					<button onclick="submitGuess('w')">w</button>
+				</div>
+				<div id="key-e" class="key">
+					<button onclick="submitGuess('e')">e</button>
+				</div>
+				<div id="key-r" class="key">
+					<button onclick="submitGuess('r')">r</button>
+				</div>
+				<div id="key-t" class="key">
+					<button onclick="submitGuess('t')">t</button>
+				</div>
+				<div id="key-y" class="key">
+					<button onclick="submitGuess('y')">y</button>
+				</div>
+				<div id="key-u" class="key">
+					<button onclick="submitGuess('u')">u</button>
+				</div>
+				<div id="key-i" class="key">
+					<button onclick="submitGuess('i')">i</button>
+				</div>
+				<div id="key-o" class="key">
+					<button onclick="submitGuess('o')">o</button>
+				</div>
+				<div id="key-p" class="key">
+					<button onclick="submitGuess('p')">p</button>
+				</div>
+			</div>
+			<div class="rows">
+				<div id="key-a" class="key">
+					<button onclick="submitGuess('a')">a</button>
+				</div>
+				<div id="key-s" class="key">
+					<button onclick="submitGuess('s')">s</button>
+				</div>
+				<div id="key-d" class="key">
+					<button onclick="submitGuess('d')">d</button>
+				</div>
+				<div id="key-f" class="key">
+					<button onclick="submitGuess('f')">f</button>
+				</div>
+				<div id="key-g" class="key">
+					<button onclick="submitGuess('g')">g</button>
+				</div>
+				<div id="key-h" class="key">
+					<button onclick="submitGuess('h')">h</button>
+				</div>
+				<div id="key-j" class="key">
+					<button onclick="submitGuess('j')">j</button>
+				</div>
+				<div id="key-k" class="key">
+					<button onclick="submitGuess('k')">k</button>
+				</div>
+				<div id="key-l" class="key">
+					<button onclick="submitGuess('l')">l</button>
+				</div>
+			</div>
+			<div class="rows">
+				<div id="key-z" class="key">
+					<button onclick="submitGuess('z')">z</button>
+				</div>
+				<div id="key-x" class="key">
+					<button onclick="submitGuess('x')">x</button>
+				</div>
+				<div id="key-c" class="key">
+					<button onclick="submitGuess('c')">c</button>
+				</div>
+				<div id="key-v" class="key">
+					<button onclick="submitGuess('v')">v</button>
+				</div>
+				<div id="key-b" class="key">
+					<button onclick="submitGuess('b')">b</button>
+				</div>
+				<div id="key-n" class="key">
+					<button onclick="submitGuess('n')">n</button>
+				</div>
+				<div id="key-m" class="key">
+					<button onclick="submitGuess('m')">m</button>
+				</div>
+			</div>
+		</div>
+		<div class="game-options">
+			<div class="button-7">
+				<button onclick="newGame(7)">New 7-Guess Game</button>
+			</div>
+			<div class="button-26">
+				<button onclick="newGame(26)">New 26-Guess Game</button>
+			</div>
+		</div>
+
+		<script src="wordlist.js"></script>
+		<script src="evilhangman.js"></script>
+	</body>
+</html>
