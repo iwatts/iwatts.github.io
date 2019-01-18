@@ -12,7 +12,8 @@ function newGame(guesses) {
 	currentWordList = wordList;
 	remainingGuesses = guesses;
   totalGuesses = guesses;
-  remainingIncorrectGuesses = guesses;
+	remainingIncorrectGuesses = guesses;
+	correctLetters = 0;
 	if (modalElement && modalElement.classList.contains("active")) {
 		document.getElementById(`result`).innerHTML = '';
 		document.getElementById(`result`).classList.remove("show");

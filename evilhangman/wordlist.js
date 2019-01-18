@@ -1,4 +1,4 @@
-var wordList = 
+var wordList =
 `aarrghh
 abalone
 abandon
@@ -23107,4 +23107,4 @@ zymoses
 zymosis
 zymotic
 zymurgy
-zyzzyva`.split("\n").slice(0, 20)
+zyzzyva`.split("\n")
