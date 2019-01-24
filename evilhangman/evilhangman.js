@@ -6,17 +6,18 @@ let correctLetters = 0;
 
 let modalElement = document.getElementsByClassName(`modal`)[0];
 let coverblockElement = document.getElementById(`cover-block`);
-let keysList = document.getElementsByClassName('key')
+let keysList = document.getElementsByClassName("key");
 
 function newGame(guesses) {
 	currentWordList = wordList;
 	remainingGuesses = guesses;
-  totalGuesses = guesses;
+	totalGuesses = guesses;
 	remainingIncorrectGuesses = guesses;
 	correctLetters = 0;
 	if (modalElement && modalElement.classList.contains("active")) {
-		document.getElementById(`result`).innerHTML = '';
+		document.getElementById(`result`).innerHTML = "";
 		document.getElementById(`result`).classList.remove("show");
+		$("#myModal").modal("hide");
 		modalElement.classList.remove(`active`);
 	}
 	percentageLeft();
@@ -24,8 +25,8 @@ function newGame(guesses) {
 }
 
 function endGame() {
-  endGameText = "";
-  //all lettters need to be guessed
+	endGameText = "";
+	//all lettters need to be guessed
 	if (Object.keys(currentWordList).length == 1) {
 		endGameText = "You Won!";
 	} else {
@@ -33,14 +34,17 @@ function endGame() {
 	}
 	document.getElementById(`result`).classList.add("show");
 	document.getElementById(`result`).innerHTML = endGameText;
-  modalElement.classList.add(`active`);
-  for ( let i = 0; i < keysList.length; i++) {
-    keysList[i].classList.add("disabled");
-  }
+	modalElement.classList.add(`active`);
+	$("#myModal").modal("show");
+	for (let i = 0; i < keysList.length; i++) {
+		keysList[i].classList.add("disabled");
+	}
 }
 
 function percentageLeft() {
-	remainingPercentage = Math.floor((remainingIncorrectGuesses / totalGuesses) * 100);
+	remainingPercentage = Math.floor(
+		(remainingIncorrectGuesses / totalGuesses) * 100
+	);
 	imageRevealPercentage = Math.floor(100 - remainingPercentage);
 	coverblockElement.style.top = imageRevealPercentage + "%";
 }
@@ -83,26 +87,25 @@ function resetWords() {
 	}
 }
 function submitGuess(letter) {
-  console.log('incorrectguesses: ',remainingIncorrectGuesses)
-  // if this is empty it was an failed guess
-  const indices = guessLetter(letter.toLowerCase());
-  console.log('indices: ', indices)
-  //check for incorrect guess
-  if (indices.length === 0) {
-    console.log('incorrect Guess')
-    remainingIncorrectGuesses--
-  }
-
+	console.log("incorrectguesses: ", remainingIncorrectGuesses);
+	// if this is empty it was an failed guess
+	const indices = guessLetter(letter.toLowerCase());
+	console.log("indices: ", indices);
+	//check for incorrect guess
+	if (indices.length === 0) {
+		console.log("incorrect Guess");
+		remainingIncorrectGuesses--;
+	}
 
 	for (const index of indices) {
 		document.getElementById(
 			`letter${index}`
-    ).innerHTML = letter.toUpperCase();
-    if(indices[index]  !== '') {
-      correctLetters++
-      console.log('Correct Letters: ', correctLetters)
-    }
-  }
+		).innerHTML = letter.toUpperCase();
+		if (indices[index] !== "") {
+			correctLetters++;
+			console.log("Correct Letters: ", correctLetters);
+		}
+	}
 
 	document
 		.getElementById(`key-${letter.toLowerCase()}`)
@@ -111,9 +114,7 @@ function submitGuess(letter) {
 	percentageLeft();
 	guessesLeft = remainingGuesses;
 	wordPickedButNotGuessed =
-		Object.keys(currentWordList).length === 1
-			? true
-			: false;
+		Object.keys(currentWordList).length === 1 ? true : false;
 	if (correctLetters === 7 || remainingIncorrectGuesses <= 0) {
 		return endGame();
 	}

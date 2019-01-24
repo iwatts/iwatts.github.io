@@ -1,4 +1,4 @@
-body {
+/* body {
     bottom: 20%;
     height: fit-content;
     left: 0;
@@ -8,116 +8,120 @@ body {
     text-align: center;
     top: 0;
     width: fit-content;
-}
+} */
 button:focus {
-    outline: 0;
+	outline: 0;
 }
 button {
-    bottom: 0;
-    cursor: pointer;
-    position: relative;
-    transition: all .2s ease;
+	bottom: 0;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
 }
 button:hover {
-    opacity: .9;
-    bottom: .1rem;
+	opacity: 0.9;
+	bottom: 0.1rem;
 }
-.button-7 button:hover, .button-26 button:hover {
-    background: linear-gradient(to bottom right, #b35fff, #ff5f7d);
+.button-7 button:hover,
+.button-26 button:hover {
+	background: linear-gradient(to bottom right, #b35fff, #ff5f7d);
 }
 .button-7 button {
-    color: white;
-    border: none;
-    padding: 1rem 1.5rem;
+	color: white;
+	border: none;
+	padding: 1rem 1.5rem;
+	background: #ddd
 }
 .button-26 button {
-    color: white;
-    border: none;
-    padding: 1rem 1.5rem;
+	color: white;
+	border: none;
+	padding: 1rem 1.5rem;
+	background: #ddd
 }
 .hangman {
-    position: relative;
-    margin: auto;
-    width: 20rem;
+	position: relative;
+	margin: auto;
+	width: 20rem;
 }
 .hangman img {
-    width: 100%;
+	width: 100%;
 }
 .hangman .cover-block-wrapper {
-    height: 65%;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 3.2rem;
-    width: 50%;
+	height: 65%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 3.2rem;
+	width: 50%;
 }
 .hangman .cover-block-wrapper #cover-block {
-    top: 0%;
-    background: white;
-    position: relative;
-    height: 100%;
+	top: 0%;
+	background: white;
+	position: relative;
+	height: 100%;
 }
 .word {
-    margin: 2rem 0;
+	margin: 2rem 0;
 }
 .word .letter {
-    border-bottom: solid 1px black;
-    display: inline-block;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin: 0 0.2rem;
-    width: 1rem;
+	border-bottom: solid 1px black;
+	display: inline-block;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 0.2rem;
+	width: 1rem;
 }
 .keyboard {
-    cursor: pointer;
+	cursor: pointer;
 }
 .key {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0.4rem;
-    transition: all .3s ease;
-    vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0.4rem;
+	transition: all 0.3s ease;
+	vertical-align: middle;
 }
 .key button {
-    background: white;
-    border-radius: 0.3rem;
-    border: none;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.17);
-    cursor: pointer;
-    padding: 0.8rem 0;
-    transition: all .3s ease;
-    width: 3rem;
+	background: white;
+	border-radius: 0.3rem;
+	border: none;
+	box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.17);
+	cursor: pointer;
+	padding: 0.8rem 0;
+	transition: all 0.3s ease;
+	width: 3rem;
 }
 .key.disabled {
-    opacity: .2;
+	opacity: 0.2;
 }
 .key.disabled button {
-    box-shadow: inset 4px 4px 10px 0px rgba(0, 0, 0, 0.32);
+	box-shadow: inset 4px 4px 10px 0px rgba(0, 0, 0, 0.32);
 }
 .game-options {
-    margin: 5rem 0;
+	margin: 5rem 0;
 }
-.game-options .button-7, .game-options .button-26 {
-    display: inline-block;
-    margin: 0 1rem;
-    vertical-align: middle;
+.game-options .button-7,
+.game-options .button-26 {
+	display: inline-block;
+	margin: 0 1rem;
+	vertical-align: middle;
 }
 div#result.show {
-    background: linear-gradient(to bottom right, #ff5e00, #fbff00);
-    border-radius: 0.2rem;
-    bottom: 20%;
-    color: white;
-    display: block;
-    font-family: sans-serif;
-    font-size: 2rem;
-    height: fit-content;
-    left: 0;
-    margin: auto;
-    padding: 2rem;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: fit-content;
-    z-index: 1;
+	background: linear-gradient(to bottom right, #ff5e00, #fbff00);
+	border-radius: 0.2rem;
+	bottom: 20%;
+	color: white;
+	display: block;
+	font-family: sans-serif;
+	font-size: 2rem;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 2rem;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 100px;
+	width: fit-content;
+	z-index: 1;
 }

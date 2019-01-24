@@ -6,124 +6,173 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Page Title</title>
+		<title>Evil Hangman</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+			integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
-		<div class="modal">
-			<div id="result" class="result"></div>
-			<div class="game-options">
-				<div class="button-7">
-					<button onclick="newGame(7)">New 7-Guess Game</button>
-				</div>
-				<div class="button-26">
-					<button onclick="newGame(26)">New 26-Guess Game</button>
-				</div>
-			</div>
-		</div>
-		<div class="hangman"><img src="./hangman.jpg" alt="" /><div class="cover-block-wrapper"><div id="cover-block" data-percentage="0%"></div></div></div>
-		<div class="word">
-			<div id="letter0" class="letter"></div>
-			<div id="letter1" class="letter"></div>
-			<div id="letter2" class="letter"></div>
-			<div id="letter3" class="letter"></div>
-			<div id="letter4" class="letter"></div>
-			<div id="letter5" class="letter"></div>
-			<div id="letter6" class="letter"></div>
-		</div>
-		<div class="keyboard" >
-			<div class="rows">
-				<div id="key-q" class="key disabled">
-					<button onclick="submitGuess('q')">q</button>
-				</div>
-				<div id="key-w" class="key disabled">
-					<button onclick="submitGuess('w')">w</button>
-				</div>
-				<div id="key-e" class="key disabled">
-					<button onclick="submitGuess('e')">e</button>
-				</div>
-				<div id="key-r" class="key disabled">
-					<button onclick="submitGuess('r')">r</button>
-				</div>
-				<div id="key-t" class="key disabled">
-					<button onclick="submitGuess('t')">t</button>
-				</div>
-				<div id="key-y" class="key disabled">
-					<button onclick="submitGuess('y')">y</button>
-				</div>
-				<div id="key-u" class="key disabled">
-					<button onclick="submitGuess('u')">u</button>
-				</div>
-				<div id="key-i" class="key disabled">
-					<button onclick="submitGuess('i')">i</button>
-				</div>
-				<div id="key-o" class="key disabled">
-					<button onclick="submitGuess('o')">o</button>
-				</div>
-				<div id="key-p" class="key disabled">
-					<button onclick="submitGuess('p')">p</button>
+		<div class="container-fluid justify-content-center">
+			<div class="row justify-content-center">
+					<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-body">
+									<div id="result" class="result justify-content-center"></div>
+								</div>
+								<div class="modal-footer justify-content-center game-options">
+									<div class="button-7">
+										<button onclick="newGame(7)">
+											New 7-Guess Game
+										</button>
+									</div>
+									<div class="button-26">
+										<button onclick="newGame(26)">
+											New 26-Guess Game
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="rows">
-				<div id="key-a" class="key disabled">
-					<button onclick="submitGuess('a')">a</button>
-				</div>
-				<div id="key-s" class="key disabled">
-					<button onclick="submitGuess('s')">s</button>
-				</div>
-				<div id="key-d" class="key disabled">
-					<button onclick="submitGuess('d')">d</button>
-				</div>
-				<div id="key-f" class="key disabled">
-					<button onclick="submitGuess('f')">f</button>
-				</div>
-				<div id="key-g" class="key disabled">
-					<button onclick="submitGuess('g')">g</button>
-				</div>
-				<div id="key-h" class="key disabled">
-					<button onclick="submitGuess('h')">h</button>
-				</div>
-				<div id="key-j" class="key disabled">
-					<button onclick="submitGuess('j')">j</button>
-				</div>
-				<div id="key-k" class="key disabled">
-					<button onclick="submitGuess('k')">k</button>
-				</div>
-				<div id="key-l" class="key disabled">
-					<button onclick="submitGuess('l')">l</button>
+			<div class="row justify-content-center">
+				<div class="hangman">
+					<img src="./hangman.jpg" alt="" />
+					<div class="cover-block-wrapper">
+						<div id="cover-block" data-percentage="0%"></div>
+					</div>
 				</div>
 			</div>
-			<div class="rows">
-				<div id="key-z" class="key disabled">
-					<button onclick="submitGuess('z')">z</button>
-				</div>
-				<div id="key-x" class="key disabled">
-					<button onclick="submitGuess('x')">x</button>
-				</div>
-				<div id="key-c" class="key disabled">
-					<button onclick="submitGuess('c')">c</button>
-				</div>
-				<div id="key-v" class="key disabled">
-					<button onclick="submitGuess('v')">v</button>
-				</div>
-				<div id="key-b" class="key disabled">
-					<button onclick="submitGuess('b')">b</button>
-				</div>
-				<div id="key-n" class="key disabled">
-					<button onclick="submitGuess('n')">n</button>
-				</div>
-				<div id="key-m" class="key disabled">
-					<button onclick="submitGuess('m')">m</button>
+			<div class="row justify-content-center">
+				<div class="word">
+					<div id="letter0" class="letter"></div>
+					<div id="letter1" class="letter"></div>
+					<div id="letter2" class="letter"></div>
+					<div id="letter3" class="letter"></div>
+					<div id="letter4" class="letter"></div>
+					<div id="letter5" class="letter"></div>
+					<div id="letter6" class="letter"></div>
 				</div>
 			</div>
-		</div>
-		<div class="game-options">
-			<div class="button-7">
-				<button onclick="newGame(7)">New 7-Guess Game</button>
+			<div class="row container mx-auto">
+				<div class="keyboard col-md-12">
+					<div class="row justify-content-center">
+						<div id="key-q" class="key disabled">
+							<button onclick="submitGuess('q')">q</button>
+						</div>
+						<div id="key-w" class="key disabled">
+							<button onclick="submitGuess('w')">w</button>
+						</div>
+						<div id="key-e" class="key disabled">
+							<button onclick="submitGuess('e')">e</button>
+						</div>
+						<div id="key-r" class="key disabled">
+							<button onclick="submitGuess('r')">r</button>
+						</div>
+						<div id="key-t" class="key disabled">
+							<button onclick="submitGuess('t')">t</button>
+						</div>
+						<div id="key-y" class="key disabled">
+							<button onclick="submitGuess('y')">y</button>
+						</div>
+						<div id="key-u" class="key disabled">
+							<button onclick="submitGuess('u')">u</button>
+						</div>
+						<div id="key-i" class="key disabled">
+							<button onclick="submitGuess('i')">i</button>
+						</div>
+						<div id="key-o" class="key disabled">
+							<button onclick="submitGuess('o')">o</button>
+						</div>
+						<div id="key-p" class="key disabled">
+							<button onclick="submitGuess('p')">p</button>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div id="key-a" class="key disabled">
+							<button onclick="submitGuess('a')">a</button>
+						</div>
+						<div id="key-s" class="key disabled">
+							<button onclick="submitGuess('s')">s</button>
+						</div>
+						<div id="key-d" class="key disabled">
+							<button onclick="submitGuess('d')">d</button>
+						</div>
+						<div id="key-f" class="key disabled">
+							<button onclick="submitGuess('f')">f</button>
+						</div>
+						<div id="key-g" class="key disabled">
+							<button onclick="submitGuess('g')">g</button>
+						</div>
+						<div id="key-h" class="key disabled">
+							<button onclick="submitGuess('h')">h</button>
+						</div>
+						<div id="key-j" class="key disabled">
+							<button onclick="submitGuess('j')">j</button>
+						</div>
+						<div id="key-k" class="key disabled">
+							<button onclick="submitGuess('k')">k</button>
+						</div>
+						<div id="key-l" class="key disabled">
+							<button onclick="submitGuess('l')">l</button>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div id="key-z" class="key disabled">
+							<button onclick="submitGuess('z')">z</button>
+						</div>
+						<div id="key-x" class="key disabled">
+							<button onclick="submitGuess('x')">x</button>
+						</div>
+						<div id="key-c" class="key disabled">
+							<button onclick="submitGuess('c')">c</button>
+						</div>
+						<div id="key-v" class="key disabled">
+							<button onclick="submitGuess('v')">v</button>
+						</div>
+						<div id="key-b" class="key disabled">
+							<button onclick="submitGuess('b')">b</button>
+						</div>
+						<div id="key-n" class="key disabled">
+							<button onclick="submitGuess('n')">n</button>
+						</div>
+						<div id="key-m" class="key disabled">
+							<button onclick="submitGuess('m')">m</button>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="button-26">
-				<button onclick="newGame(26)">New 26-Guess Game</button>
+			<div class="row justify-content-center">
+				<div class="game-options">
+					<div class="button-7">
+						<button onclick="newGame(7)">New 7-Guess Game</button>
+					</div>
+					<div class="button-26">
+						<button onclick="newGame(26)">New 26-Guess Game</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
