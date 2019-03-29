@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="new-game" class="new-game">
+        <div>You won <span id="winnings"></span>!</div>
+        <p>New Game?</p>
+        <button onclick="newGame()">Continue</button>
+    </div>
+    <div class="previous-winnings-wrapper">
+        <h2>previous winnings</h2>
+        <ul id="previous-winnings">
+        </ul>
+    </div>
+    <div class="cases-container-shell">
+        <div id="round-counter" class="round-counter"></div>
+        <div id="case-container" class="case-container">
+        </div>
+        <div class="cases-eliminate">
+            <span>Cases Remaining:</span>
+            <span id="eliminations-remaining"></span>
+        </div>
+    </div>
+    <div class="remaining-values-wrapper">
+        <h2>Amounts Remaining</h2>
+        <ul id="remaining-values">
+        </ul>
+    </div>
+    <div class="case-menu">
+        <h2>your case</h2>
+        <div id="player-case" class="player-case" onclick="keepYourCase()"></div>
+        <div class="bank-offer-shell">
+            <h2>bank offer</h2>
+            <div id="bank-offer"></div>
+            <button onclick="acceptOffer()">accept</button>
+            <button onclick="rejectOffer()" class="decline">decline</button>
+            <img src="./resources/banker.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="dealOrNoDeal.js"></script>
+</body>
+
+</html>

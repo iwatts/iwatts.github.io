@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 0;
+    margin: 0;
+    padding-top: 5rem;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+button {
+    cursor: pointer;
+}
+h2 {
+    text-transform: uppercase;
+}
+div.new-game {
+    background: white;
+    box-shadow: 1px 1px 1px 1px black;
+    color: black;
+    left: 0;
+    font-size: 2rem;
+    margin: auto;
+    max-width: 500px;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 90%;
+    z-index: 1;
+}
+div.previous-winnings-wrapper, div.case-menu, div.cases-container-shell {
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: top;
+}
+div.previous-winnings-wrapper, div.case-menu {
+    max-width: 300px;
+    width: 20%;
+}
+div.previous-winnings-wrapper {
+    height: 570px;
+    overflow-y: scroll;
+}
+div.previous-winnings-wrapper li {
+    font-size: 1.5rem;
+}
+div.cases-container-shell {
+    max-width: 700px;
+    padding: 1rem;
+    transition: all .5s ease;
+    width: 45%;
+}
+body.dark div.cases-container-shell {
+    opacity: .5;
+}
+body.dark div.remaining-values-wrapper {
+    opacity: .5;
+}
+div.remaining-values-wrapper {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1rem;
+    width: 15%;
+}
+div.remaining-values-wrapper li {
+    background: linear-gradient(gold, #d98200);
+    color: black;
+    display: inline-block;
+    font-weight: bold;
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    text-shadow: 1px 1px 0px white;
+    padding: .5rem 0;
+    font-size: 1.3rem;
+}
+div.case-menu {
+    border: solid 2px gold;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+div.round-counter {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+div.player-case {
+    background-size: contain;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    width: 180px;
+}
+div.case {
+    background: url(./resources/case-closed.png) top center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 120px;
+    position: relative;
+    vertical-align: top;
+    width: 130px;
+}
+div.case span {
+    bottom: 0;
+    color: black;
+    font-size: 4rem;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}
+div.case.open {
+    background: url(./resources/case-open.png) top center no-repeat;
+    background-size: contain;
+}
+div.case.open span {
+    color: white;
+    font-size: 1.2rem;
+    top: -1.3rem;
+}
+.bank-offer-shell {
+    height: 0;
+    transition: all .5s ease;
+}
+body.dark .bank-offer-shell {
+    height: 430px;
+}
+.bank-offer-shell button {
+    background: green;
+    border-radius: 0.4rem;
+    border: none;
+    color: white;
+    margin: 1rem 0 2rem;
+    padding: 0.8rem 1.5rem;
+    text-transform: uppercase;
+}
+.bank-offer-shell button.decline {
+    background: red;
+}
+body.dark .bank-offer-shell img {
+    animation: ring .1s 10;
+}
+#bank-offer {
+    font-size: 3rem;
+}
+
+@keyframes ring {
+    0% {
+        opacity: .9;
+        transform: rotate(2deg) scale(1.01);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
