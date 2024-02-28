@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+
+h1,
+h2,
+h3,
+.navbar-brand {
+	font-family: "Island Moments", cursive;
+}
+a.navbar-brand {
+	font-size: xx-large;
+}
+.navbar-dark.navbar-tanitia-dark {
+	background-color: #165c45 !important;
+}
+h2 {
+    font-size: 48px;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+	color: #c7fdf7;
+	text-shadow: none; /* Prevent inheritance from `body` */
+	background-color: #165c45;
+	border: 0.05rem solid #165c45;
+}
+
+/* Custom default outline button */
+.btn-outline-secondary,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+	color: #165c45;
+    background-color: transparent;
+    background-image: none;
+    border-color: #165c45;
+}
+
+.choices__list--multiple .choices__item{
+    background-color: #62B6CB !important;
+    border: 1px solid #165c45 !important;
+}
